@@ -1,2 +1,2 @@
-# mrzzy.co
-mrzzy.co Website
+# art.mrzzy.co
+art.mrzzy.co Website
