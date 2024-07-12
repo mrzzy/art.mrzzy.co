@@ -34,7 +34,7 @@ jobs:
     - name: Install Node Packages
       run: npm ci --include=dev
     - name: Run Tests
-      run: npx jest --verbose"
+      run: npx jest --verbose
 
   build-publish:
     name: "Build & Publish Site"
@@ -48,7 +48,7 @@ jobs:
       run: |
         set -exu -o pipefail
         sudo curl https://github.com/Backblaze/B2_Command_Line_Tool/releases/latest/download/b2-linux -o /usr/local/bin/b2
-        sudo chmod a+rw /usr/local/bin/b2
+        sudo chmod a+rx /usr/local/bin/b2
     - name: Install Node Packages
       run: npm ci --include=dev
     - name: Build site
