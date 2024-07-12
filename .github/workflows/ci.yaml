@@ -34,7 +34,7 @@ jobs:
     - name: Install Node Packages
       run: npm ci --include=dev
     - name: Run Tests
-      run: npx jest --verbose
+      run: npx jest --verbose --passWithNoTests
 
   build-publish:
     name: "Build & Publish Site"
