@@ -1,8 +1,26 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Lato, Playfair_Display } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+// configure fonts
+// sans serif
+const sansFont = Lato({
+  subsets: ["latin"],
+  display: "swap",
+  weight: [
+    "300", // light
+    "400", // regular
+    "700", // bold
+  ],
+  variable: "--font-lato",
+});
+// serif font
+const serifFont = Playfair_Display({
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["400"],
+  variable: "--font-playfair-display",
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +34,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className="font-sans">{children}</body>
     </html>
   );
 }
