@@ -1,0 +1,62 @@
+#
+# art.mrzzy.co
+# CI Pipeline
+#
+
+name: "CI Pipeline"
+on: push
+env:
+  NODE_VERSION: "~20.15"
+jobs:
+  lint:
+    name: "Lint Code"
+    runs-on: ubuntu-2204
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-node@v4
+      with:
+        node-version: ${{ env.NODE_VERSION }}
+    - name: Install Node Packages
+      run: npm ci --include=dev
+    - name: Lint Code with 'next lint'
+      run: npx next lint
+    - name: Lint Code with 'standard'
+      run: npx standard
+
+  test:
+    name: "Test Code"
+    runs-on: ubuntu-2204
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-node@v4
+      with:
+        node-version: ${{ env.NODE_VERSION }}
+    - name: Install Node Packages
+      run: npm ci --include=dev
+    - name: Run Tests
+      run: npx jest --verbose"
+
+  build-publish:
+    name: "Build & Publish Site"
+    runs-on: ubuntu-2204
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-node@v4
+      with:
+        node-version: ${{ env.NODE_VERSION }}
+    - name: Install b2 CLI
+      run: |
+        set -exu -o pipefail
+        sudo curl https://github.com/Backblaze/B2_Command_Line_Tool/releases/latest/download/b2-linux -o /usr/local/bin/b2
+        sudo chmod a+rw /usr/local/bin/b2
+    - name: Install Node Packages
+      run: npm ci --include=dev
+    - name: Build site
+      run: npx next build
+    # TODO(mrzzy): gate deploy with tag
+    - name: Upload site to b2
+      env:
+        B2_APPLICATION_KEY_ID: "${{ secrets.B2_APPLICATION_KEY_ID }}"
+        B2_APPLICATION_KEY: "${{ secrets.B2_APPLICATION_KEY }}"
+      run:
+        b2 sync --delete --replace-newer out/ b2://art-mrzzy-co-site/
