@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Lato, Playfair_Display } from "next/font/google";
 import "./globals.css";
+import NavBar from "@/components/Navbar";
 
 // configure fonts
 // sans serif
@@ -18,7 +19,10 @@ const _sansFont = Lato({
 const _serifFont = Playfair_Display({
   subsets: ["latin"],
   display: "swap",
-  weight: ["400"],
+  weight: [
+    "400", // regular
+    "700", // bold
+  ],
   variable: "--font-playfair-display",
 });
 
@@ -34,7 +38,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="font-sans">{children}</body>
+      <body className="font-sans py-8">
+        <NavBar />
+        <main>
+          {children}
+        </main>
+      </body>
     </html>
   );
 }
