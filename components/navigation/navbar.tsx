@@ -12,18 +12,17 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
 } from "@/components/ui/navigation-menu";
-import { ReactNode, useState } from "react";
+import { ReactNode, useEffect, useState } from "react";
 import { Button, buttonVariants } from "@/components/ui/button";
-import useWindowDimensions from "@/lib/hooks";
 import { MEDIUM_PX } from "@/lib/media";
+import zzyLogo from "@/public/images/icons/art_mrzzy_co_logo.svg";
+import menuIcon from "@/public/images/icons/menu.svg";
+import ExportedImage from "next-image-export-optimizer";
+import { NavItem } from "./navitem";
+import { usePathname } from "next/navigation";
+import { useWindowSize } from "@uidotdev/usehooks";
 
-/** Navigation bar items */
-export enum NavItem {
-  Home = "Home",
-  About = "About",
-  Work = "Work",
-}
-
+/** Navigation link within a Navigation Bar */
 function NavLink({
   href,
   children,
@@ -39,7 +38,7 @@ function NavLink({
         href={href}
         className={
           // 60% opacity to indicate menu item is selected
-          `font-normal bg-inherit ${selected ? "/60" : ""} ${buttonVariants({ variant: "link" })}`
+          `font-normal text-slate-800 bg-inherit ${selected ? "/60" : ""} ${buttonVariants({ variant: "link" })}`
         }
       >
         {children}
@@ -50,12 +49,15 @@ function NavLink({
 
 /**
  * Renders a Navigation Bar for the site.
- * @param prop.selected Optional. Currently selected item on the Navigation Bar.
  */
-export default function NavBar({ selected }: { selected?: NavItem }) {
+export function NavBar() {
+  // whether the navbar is currently expanded
   const [expanded, setExpanded] = useState(true);
-  const {width} = useWindowDimensions();
-  console.log(window.innerWidth);
+  useEffect(() => {
+    setExpanded(false);
+  });
+  const { width } = useWindowSize();
+  const pathname = usePathname();
   return (
     <NavigationMenu className="flex-row items-start min-w-full">
       <Button
@@ -63,24 +65,27 @@ export default function NavBar({ selected }: { selected?: NavItem }) {
         className="flex-none md:hidden p-1 size-9"
         onClick={() => setExpanded(!expanded)}
       >
-        <img src="/icons/menu.svg" />
+        <ExportedImage src={menuIcon} alt="Menu" />
       </Button>
       <div className="grow relative right-4">
         <NavigationMenuList>
-          <NavLink href="/">
-            <img src="/icons/art_mrzzy_co_logo.svg" alt={NavItem.Home} />
+          <NavLink href={NavItem.Home}>
+            <ExportedImage src={zzyLogo} alt="Home" />
           </NavLink>
         </NavigationMenuList>
         <NavigationMenuList
           className={
-            "mt-1 gap-x-16 md:flex-row " + (expanded || width >= MEDIUM_PX ? "flex-col" : "hidden")
+            "mt-1 gap-x-16 md:flex-row " +
+            (expanded || (width != null && width >= MEDIUM_PX)
+              ? "flex-col"
+              : "hidden")
           }
         >
-          <NavLink href="/work" selected={selected === NavItem.Work}>
-            {NavItem.Work}
+          <NavLink href={NavItem.Work} selected={pathname === NavItem.Work}>
+            Work
           </NavLink>
-          <NavLink href="/about" selected={selected === NavItem.About}>
-            {NavItem.About}
+          <NavLink href={NavItem.About} selected={pathname === NavItem.About}>
+            About
           </NavLink>
         </NavigationMenuList>
       </div>

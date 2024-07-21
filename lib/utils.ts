@@ -1,3 +1,9 @@
+/*
+ * art.mrzzy.co
+ * Utilities
+ * Homepage
+ */
+
 import { type ClassValue, clsx } from "clsx"
 import { twMerge } from "tailwind-merge"
 

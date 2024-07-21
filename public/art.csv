@@ -1,0 +1,11 @@
+ID,Image,Orientation,Height (mm),Width (mm),Made On,Title,Medium,Location,Cost,Framing Cost,List Price,Featured,Exhibited,Sales Channel,Sold On,Sold Price,Bought By
+1,/art/1.jpg,Vertical,410,310,2024-07-16,KL Dusk,Watercolor on paper,Luggage,5,,150,FALSE,,,,,
+2,/art/2.jpg,Horizontal,180,260,2024-07-16,National Mosque,Watercolor on paper,Luggage,2.5,,50,FALSE,,,,,
+3,/art/3.jpg,Horizontal,310,410,2024-07-16,St. John's Intitution,Watercolor on paper,Luggage,5,,250,TRUE,,,,,
+4,/art/4.jpg,Vertical,410,310,2024-07-15,Merdeka!,Watercolor on paper,Luggage,5,,175,FALSE,,,,,
+5,/art/5.jpg,Horizontal,310,410,2024-07-15,Sri Maha Mariamman Temple,Watercolor on paper,Luggage,5,,250,TRUE,,,,,
+6,/art/6.jpg,Vertical,410,310,2024-07-14,Thean Hou Temple,Watercolor on paper,Luggage,5,,200,FALSE,,,,,
+7,/art/7.jpg,Horizontal,270,380,2024-06-29,The Calm Before the Storm,Watercolor on paper,Home,4,,150,FALSE,,,,,
+8,/art/8.jpg,Vertical,380,270,2024-07-04,Holttum Hall,Watercolor on paper,Green Pavilion @ Singapore Botanical Gardens,4,,200,TRUE,Living Story: An Interactive Exhibition,,,,
+9,/art/9.jpg,Horizontal,180,260,2024-07-02,Late Afternoon Tea,Watercolor on paper,Home,2.5,,50,FALSE,,,,,
+10,/art/10.jpg,Vertical,380,270,2024-07-07,River Sparkle,Watercolor on paper,Home,4,,200,TRUE,,,,,

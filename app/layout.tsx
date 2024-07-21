@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import { Lato, Playfair_Display } from "next/font/google";
 import "./globals.css";
-import NavBar from "@/components/Navbar";
+import { NavBar } from "@/components/navigation/navbar";
+import { Footer } from "@/components/navigation/footer";
 
 // configure fonts
 // sans serif
-const _sansFont = Lato({
+const sansFont = Lato({
   subsets: ["latin"],
   display: "swap",
   weight: [
@@ -16,7 +17,7 @@ const _sansFont = Lato({
   variable: "--font-lato",
 });
 // serif font
-const _serifFont = Playfair_Display({
+const serifFont = Playfair_Display({
   subsets: ["latin"],
   display: "swap",
   weight: [
@@ -31,18 +32,18 @@ export const metadata: Metadata = {
   description: "Zhanyan's Art",
 };
 
+/** Site Page Layout */
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${sansFont.variable} ${serifFont.variable}`}>
       <body className="font-sans py-8">
         <NavBar />
-        <main>
-          {children}
-        </main>
+        {children}
+        <Footer />
       </body>
     </html>
   );
