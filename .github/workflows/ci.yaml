@@ -54,7 +54,6 @@ jobs:
     - name: Build site
       run: npx next build
     - name: Upload site to b2
-      if: ${{ github.ref_type == "tag" }}
       env:
         B2_APPLICATION_KEY_ID: "${{ secrets.B2_APPLICATION_KEY_ID }}"
         B2_APPLICATION_KEY: "${{ secrets.B2_APPLICATION_KEY }}"
