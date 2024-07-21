@@ -8,12 +8,13 @@
 
 import { Art, Orientation } from "@/lib/models";
 import { useOrientation, useWindowSize } from "@uidotdev/usehooks";
-import ExportedImage from "next-image-export-optimizer";
 import { useEffect, useState } from "react";
 import { Skeleton } from "../ui/skeleton";
-import { Button, buttonVariants } from "../ui/button";
+import { buttonVariants } from "../ui/button";
 import Link from "next/link";
 import { NavItem } from "../navigation/navitem";
+import SmoothImage from "@/components/ui/smooth-image";
+import Metadata from "@/components/ui/art-metadata";
 
 /**
  * Hero features a random featured art piece given user device orientation.
@@ -37,11 +38,6 @@ export default function Hero(props: { featured: Art[] }) {
       ? Orientation.Vertical
       : Orientation.Horizontal;
 
-  const imgWidth =
-    orientation == Orientation.Horizontal ? winWidth * 0.72 : winWidth;
-  const imgHeight =
-    orientation == Orientation.Vertical ? winHeight * 0.72 : winHeight;
-
   // filter pieces based on current screen orientation
   const aligned = props.featured.filter(
     (art) => art.orientation === orientation,
@@ -54,58 +50,50 @@ export default function Hero(props: { featured: Art[] }) {
     );
   }
 
-  // pick random featured painting to show
-  const index = Math.floor(random * aligned.length);
-  const { image, height, width, madeOn, title, medium } = aligned[index];
+  // pick random featured art piece to show
+  const art = aligned[Math.floor(random * aligned.length)];
+  const { image, title } = art;
   const heightLimit =
     orientation == Orientation.Horizontal ? "max-h-[72vh]" : "";
+
+  // art image
   const hero = isClient ? (
-    <ExportedImage
-      className={`object-scale-down ${heightLimit}`}
+    <SmoothImage
       src={`/images${image}`}
+      className={`object-contain ${heightLimit}`}
       alt={title}
-      width={imgWidth}
-      height={imgHeight}
+      width={winWidth}
+      height={winHeight}
     />
   ) : (
-    <Skeleton className={`w-[80vmin] h-[80vmin] ${heightLimit}`} />
+    <Skeleton className={`md:m-12 w-[80vmin] h-[80vmin] ${heightLimit}`} />
   );
-  const header = isClient ? (
-    <h1 className="font-serif font-bold text-4xl ">{title}</h1>
-  ) : (
-    <Skeleton className="h-12 w-80 rounded-full" />
-  );
-  const metadata = (
-    <div
-      className={`text-sm my-2 justify-self-start ${isClient ? "" : "space-y-2"}`}
-    >
-      {isClient ? (
-        <p>
-          {height}mm x {width} mm
-        </p>
-      ) : (
+
+  // art metadata skeleton
+  const metaSkeleton = (
+    <div>
+      <Skeleton className="h-12 w-80 rounded-full" />
+      <div
+        className={`text-sm my-2 justify-self-start ${isClient ? "" : "space-y-2"}`}
+      >
         <Skeleton className="h-6 w-40 rounded-full" />
-      )}
-      {isClient ? (
-        <p>{medium}</p>
-      ) : (
         <Skeleton className="h-6 w-64 rounded-full" />
-      )}
-      {isClient ? (
-        <p>{madeOn.getUTCFullYear()}</p>
-      ) : (
         <Skeleton className="h-6 w-10 rounded-full" />
-      )}
+      </div>
     </div>
   );
 
   return (
     <section className="flex flex-col md:flex-row md:items-center">
       {hero}
-      <div className="m-6 space-y-6">
-        {header}
-        {metadata}
-        <Link className={`${buttonVariants()} rounded-none !font-bold`} href={NavItem.Work}>View Work &gt; </Link>
+      <div className="m-6 space-y-6 min-w-[30vw]">
+        {isClient ? <Metadata art={art} />: metaSkeleton}
+        <Link
+          className={`${buttonVariants()} rounded-none !font-bold`}
+          href={NavItem.Gallery}
+        >
+          View Work &gt;{" "}
+        </Link>
       </div>
     </section>
   );

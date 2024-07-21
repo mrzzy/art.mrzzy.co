@@ -9,6 +9,6 @@
 export enum NavItem {
   Home = "/",
   About = "/about",
-  Work = "/work",
+  Gallery = "/gallery",
   Contact = "/about#contact",
 }

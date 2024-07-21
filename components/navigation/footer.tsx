@@ -13,7 +13,7 @@ export function Footer() {
     <footer className="flex flex-row justify-center gap-x-4 text-xs text-slate-600">
       <div>© {new Date().getFullYear()} Zhanyan</div>
       <Link href={NavItem.Home}>Home</Link>
-      <Link href={NavItem.Work}>Work</Link>
+      <Link href={NavItem.Gallery}>Gallery</Link>
       <Link href={NavItem.About}>About</Link>
       <Link href={NavItem.Contact}>Contact</Link>
     </footer>

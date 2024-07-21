@@ -16,11 +16,11 @@ import { ReactNode, useEffect, useState } from "react";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { MEDIUM_PX } from "@/lib/media";
 import zzyLogo from "@/public/images/icons/art_mrzzy_co_logo.svg";
-import menuIcon from "@/public/images/icons/menu.svg";
 import ExportedImage from "next-image-export-optimizer";
 import { NavItem } from "./navitem";
 import { usePathname } from "next/navigation";
 import { useWindowSize } from "@uidotdev/usehooks";
+import { Menu } from "lucide-react";
 
 /** Navigation link within a Navigation Bar */
 function NavLink({
@@ -55,19 +55,20 @@ export function NavBar() {
   const [expanded, setExpanded] = useState(true);
   useEffect(() => {
     setExpanded(false);
-  });
+  }, []);
   const { width } = useWindowSize();
   const pathname = usePathname();
+
   return (
     <NavigationMenu className="flex-row items-start min-w-full">
       <Button
         variant="ghost"
-        className="flex-none md:hidden p-1 size-9"
+        className="flex-none md:hidden p-1 m-6 size-9 active:bg-slate-400"
         onClick={() => setExpanded(!expanded)}
       >
-        <ExportedImage src={menuIcon} alt="Menu" />
+        <Menu />
       </Button>
-      <div className="grow relative right-4">
+      <div className="grow relative right-[2.5rem]">
         <NavigationMenuList>
           <NavLink href={NavItem.Home}>
             <ExportedImage src={zzyLogo} alt="Home" />
@@ -81,8 +82,8 @@ export function NavBar() {
               : "hidden")
           }
         >
-          <NavLink href={NavItem.Work} selected={pathname === NavItem.Work}>
-            Work
+          <NavLink href={NavItem.Gallery} selected={pathname === NavItem.Gallery}>
+            Gallery
           </NavLink>
           <NavLink href={NavItem.About} selected={pathname === NavItem.About}>
             About

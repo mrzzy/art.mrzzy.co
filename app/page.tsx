@@ -14,7 +14,7 @@ export default async function Home() {
   const featured = (await parseArt()).filter((art) => art.featured);
 
   return (
-    <main className="my-12">
+    <main className="md:my-8 pb-2">
       <Hero featured={featured} />
     </main>
   );
