@@ -47,7 +47,7 @@ jobs:
     - name: Install b2 CLI
       run: |
         set -exu -o pipefail
-        sudo curl -L https://github.com/Backblaze/B2_Command_Line_Tool/releases/latest/download/b2-linux -o /usr/local/bin/b2
+        sudo curl -L https://github.com/Backblaze/B2_Command_Line_Tool/releases/download/v4.0.3/b2-linux -o /usr/local/bin/b2
         sudo chmod a+rx /usr/local/bin/b2
     - name: Install Node Packages
       run: npm ci --include=dev
