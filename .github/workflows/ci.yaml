@@ -52,7 +52,7 @@ jobs:
     - name: Install Node Packages
       run: npm ci --include=dev
     - name: Build site
-      run: npx next build
+      run: npm run build
     - name: Upload site to b2
       env:
         B2_APPLICATION_KEY_ID: "${{ secrets.B2_APPLICATION_KEY_ID }}"
