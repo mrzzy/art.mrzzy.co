@@ -3,7 +3,6 @@
  * Models
  */
 
-
 /** Orientation of the Art piece upright. */
 export enum Orientation {
   Vertical = "Vertical",
@@ -15,6 +14,15 @@ export enum Channel {
   Direct = "Direct",
   Instagram = "Instagram",
   Website = "Website",
+}
+
+/** Defines status states of the Art piece */
+export enum Status {
+  Available = "Available",
+  Exhibiting = "Exhbiting",
+  Sold = "Sold",
+  Private = "Private", // private collection
+  Missing = "Missing",
 }
 
 /** Art Sales information. */
@@ -39,6 +47,7 @@ export type Art = {
   cost: string;
   listPrice: string;
   featured: boolean;
+  status: Status;
   framingCost: string | null;
   sale: Sale | null;
   exhibited: string | null;

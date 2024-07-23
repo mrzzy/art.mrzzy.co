@@ -18,7 +18,7 @@ import SmoothImage from "@/components/ui/smooth-image"
  * @param props.art Art piece to render in the gallery thumbnail
  *
  */
-export default function Thumbnail(props: { art: Art, onClick: () => void}) {
+export default function Thumbnail(props: { art: Art, onClick: () => void }) {
   const [isClient, setIsClient] = useState(false);
   useEffect(() => {
     setIsClient(true);
@@ -31,7 +31,7 @@ export default function Thumbnail(props: { art: Art, onClick: () => void}) {
     (orientation === Orientation.Horizontal ? colSpan : 1) * colWidth;
   const imgHeight = imgWidth / aspect(width, height);
   return (
-    <div className={`group col-span-${colSpan} relative`} onClick={props.onClick}>
+    <div className={`group relative`} onClick={props.onClick}>
       {isClient ? (
         <SmoothImage
           className={`object-cover group-hover:brightness-75 group-active:brightness-50 h-full`}

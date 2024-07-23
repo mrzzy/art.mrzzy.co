@@ -27,9 +27,10 @@ export async function parseArt(
       title: raw["Title"],
       medium: raw["Medium"],
       location: raw["Location"],
-      cost: raw["Cost"],
+      cost: raw["Painting Cost"],
       listPrice: raw["List Price"],
       featured: raw["Featured"].toLowerCase() === "true" ? true : false,
+      status: raw["Status"],
       framingCost: raw["Framing Cost"].length > 0 ? raw["Framing Cost"] : null,
       sale:
         raw["Sold On"].length > 0
