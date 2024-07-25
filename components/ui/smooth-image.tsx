@@ -10,6 +10,7 @@ import ExportedImage from "next-image-export-optimizer";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 import { Skeleton } from "./skeleton";
+import { StaticImageData } from "next/image";
 
 /**
  * Renders an smooth image at the given path under images.
@@ -18,10 +19,10 @@ import { Skeleton } from "./skeleton";
  * @param props Additional props are the same for ExportedImage.
  */
 export default function SmoothImage(props: {
-  src: string;
+  src: string | StaticImageData;
   alt: string;
-  width: number;
-  height: number;
+  width?: number;
+  height?: number;
   className?: string;
   skeletonClassName?: string;
 }) {
