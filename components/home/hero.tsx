@@ -89,7 +89,7 @@ export default function Hero(props: { featured: Art[] }) {
       <div className="m-6 space-y-6 min-w-[30vw]">
         {isClient ? <Metadata art={art} />: metaSkeleton}
         <Link
-          className={`${buttonVariants()} rounded-none !font-bold`}
+          className={`${buttonVariants()}`}
           href={NavItem.Gallery}
         >
           View Work &gt;{" "}

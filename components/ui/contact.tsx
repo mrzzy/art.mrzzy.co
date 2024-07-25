@@ -22,7 +22,8 @@ import Link from "next/link";
 /**
  * Renders a drawer component displaying contact information.
  * @param props.trigger Optional. If specified shows a trigger that opens the drawer.
- * @param props.triggerClassName Optional. If specified shows a trigger that opens the drawer.
+ * @param props.triggerClassName Optional. If specified, assigns the given
+ *  css classes to the trigger that opens the drawer.
  * @param props.open Optional. If specified, automatically opens the drawer.
  * @param props.dark Optional. Whether to render in dark mode
  */
@@ -43,13 +44,15 @@ export default function Contact(props: {
       <DrawerTrigger className={props.triggerClassName}>
         {props.trigger ?? "Contact"}
       </DrawerTrigger>
-      <DrawerContent className="p-4">
+      <DrawerContent className={`p-4 ${props.dark ? "dark text-white" : ""}`}>
         <DrawerHeader>
-          <h1 className="font-serif font-bold text-6xl">Lets Connect</h1>
-          <p>Reach out via the following avenues.</p>
+          <div className="text-center pt-8">
+            <h1 className="font-serif font-bold text-6xl">Lets Connect</h1>
+            <p>Reach out via the following avenues.</p>
+          </div>
         </DrawerHeader>
         <DrawerFooter>
-          <div className="flex flex-row gap-x-4">
+          <div className="flex flex-row gap-x-8 pb-8 justify-center">
             <div className="text-lg">
               <h3 className="font-bold text-xl">Email</h3>
               <span>{email}</span>
