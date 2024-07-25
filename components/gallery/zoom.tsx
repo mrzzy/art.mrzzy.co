@@ -45,7 +45,7 @@ export default function ZoomView(props: { art: Art; onClose: () => void }) {
   // render sales info for when painting is available
   const salesInfo = (
     <>
-      <span className="justify-self-end text-lg">S$${listPrice}</span>
+      <span className="justify-self-end text-lg">S${listPrice}</span>
       <Contact
         trigger="Inquire"
         dark={true}
