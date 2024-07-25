@@ -5,8 +5,17 @@
  */
 
 import Gallery from "@/components/gallery/gallery";
+import { METADATA } from "@/lib/meta";
 import { parseArt } from "@/lib/parsing";
+import { Metadata } from "next";
 import { Suspense } from "react";
+
+
+export const metadata: Metadata = {
+  ...METADATA,
+  title: "zzy Art: Gallery",
+  description: "Gallery of Watercolor paintings by Singaporean Artist Zhu Zhanyan. Available for purchase.",
+}
 
 /**
  * Renders the Gallery Page.

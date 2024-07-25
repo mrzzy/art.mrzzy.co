@@ -10,9 +10,19 @@ import BackgroundImg from "@/public/images/about/background.png";
 import Link from "next/link";
 import { buttonVariants } from "@/components/ui/button";
 import { NavItem } from "@/components/navigation/navitem";
+import { Metadata } from "next";
+import { METADATA } from "@/lib/meta";
+
+
+
+export const metadata: Metadata = {
+  ...METADATA,
+  title: "zzy Art: About",
+  description: "About Singaporean Artist Zhu Zhanyan."
+}
 
 /**
- * Renders the About pageA.
+ * Renders the About page.
 */
 export default function About() {
   return (
