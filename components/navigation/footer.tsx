@@ -6,8 +6,7 @@
 
 import Link from "next/link";
 import { NavItem } from "./navitem";
-import { Button } from "../ui/button";
-import Contact from "../ui/contact";
+import Contact from "@/components/ui/contact";
 
 /** Renders a Footer with navigational links the site. */
 export function Footer() {

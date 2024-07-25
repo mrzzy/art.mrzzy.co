@@ -45,7 +45,7 @@ export default function Thumbnail(props: { art: Art, onClick: () => void }) {
       )}
       <ZoomIn
         size={40}
-        className="invisible group-hover:visible group-active:brightness-50 text-white absolute bottom-[48%] left-[48%]"
+        className="invisible group-hover:visible group-active:brightness-50 text-white absolute bottom-[45%] left-[45%]"
       />
     </div>
   );
