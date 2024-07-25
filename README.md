@@ -2,6 +2,8 @@
 
 Modern Artist Website.
 
+![Screenshot of Homepage](./assets/screenshot.png)
+
 ## Description
 
 Modern [JAMStack](https://jamstack.org/) Artist website to exhibit my art
