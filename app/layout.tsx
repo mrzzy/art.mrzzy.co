@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Lato, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { NavBar } from "@/components/navigation/navbar";
@@ -33,6 +33,12 @@ export const metadata: Metadata = {
   description: "Zhanyan's Art",
 };
 
+// viewport metadata
+export const viewport: Viewport = {
+  themeColor: "white",
+  colorScheme: "light",
+};
+
 /** Site Page Layout */
 export default function RootLayout({
   children,
@@ -45,7 +51,7 @@ export default function RootLayout({
         <NavBar />
         {children}
         <Footer />
-        <Toaster/>
+        <Toaster />
       </body>
     </html>
   );
