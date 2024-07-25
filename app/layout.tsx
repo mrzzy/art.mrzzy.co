@@ -3,6 +3,7 @@ import { Lato, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { NavBar } from "@/components/navigation/navbar";
 import { Footer } from "@/components/navigation/footer";
+import { Toaster } from "@/components/ui/toaster";
 
 // configure fonts
 // sans serif
@@ -44,6 +45,7 @@ export default function RootLayout({
         <NavBar />
         {children}
         <Footer />
+        <Toaster/>
       </body>
     </html>
   );
