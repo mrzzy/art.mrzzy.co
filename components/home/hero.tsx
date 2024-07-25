@@ -12,7 +12,7 @@ import { useEffect, useState } from "react";
 import { Skeleton } from "../ui/skeleton";
 import { buttonVariants } from "../ui/button";
 import Link from "next/link";
-import { NavItem } from "../navigation/navitem";
+import { NavItem, Param } from "../navigation/navitem";
 import SmoothImage from "@/components/ui/smooth-image";
 import Metadata from "@/components/ui/art-metadata";
 
@@ -51,22 +51,26 @@ export default function Hero(props: { featured: Art[] }) {
   }
 
   // pick random featured art piece to show
-  const art = aligned[Math.floor(random * aligned.length)];
-  const { image, title } = art;
+  const piece = aligned[Math.floor(random * aligned.length)];
+  const { image, title } = piece;
   const heightLimit =
     orientation == Orientation.Horizontal ? "max-h-[72vh]" : "";
 
   // art image
+  const skeletonClass = `md:ml-24 w-[100vmin] h-[80vmin] ${heightLimit}`;
   const hero = isClient ? (
-    <SmoothImage
-      src={`/images${image}`}
-      className={`object-contain ${heightLimit}`}
-      alt={title}
-      width={winWidth}
-      height={winHeight}
-    />
+    <Link className="hover:brightness" href={`${NavItem.Gallery}?${Param.View}=${piece.id}`}>
+      <SmoothImage
+        src={`/images${image}`}
+        className={`object-contain ${heightLimit}`}
+        alt={title}
+        width={winWidth}
+        height={winHeight}
+        skeletonClassName={skeletonClass}
+      />
+    </Link>
   ) : (
-    <Skeleton className={`md:m-12 w-[80vmin] h-[80vmin] ${heightLimit}`} />
+    <Skeleton className={skeletonClass} />
   );
 
   // art metadata skeleton
@@ -87,7 +91,7 @@ export default function Hero(props: { featured: Art[] }) {
     <section className="flex flex-col md:flex-row md:items-center">
       {hero}
       <div className="m-6 space-y-6 min-w-[30vw]">
-        {isClient ? <Metadata art={art} />: metaSkeleton}
+        {isClient ? <Metadata art={piece} /> : metaSkeleton}
         <Link
           className={`${buttonVariants()}`}
           href={NavItem.Gallery}

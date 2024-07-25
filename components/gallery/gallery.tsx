@@ -21,14 +21,14 @@ import { Param } from "../navigation/navitem";
 export default function Gallery(props: { pieces: Art[] }) {
   // show piece if set in 'view' url parameter
   const params = useSearchParams()
-  const selected = props.pieces.find(({ id }) => id === params.get(PARAM_VIEW));
+  const selected = props.pieces.find(({ id }) => id === params.get(Param.View));
 
   // gallery of thumbnail art pieces
   const [router, pathname] = [useRouter(), usePathname()];
   const images = props.pieces.map((art) => (
     <Thumbnail art={art} key={art.id} onClick={() => {
       // show piece on thumbnail click
-      router.push(`${pathname}?${PARAM_VIEW}=${art.id}`);
+      router.push(`${pathname}?${Param.View}=${art.id}`);
     }} />
   ));
 

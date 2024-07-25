@@ -9,10 +9,12 @@
 import ExportedImage from "next-image-export-optimizer";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
+import { Skeleton } from "./skeleton";
 
 /**
- * Renders an smoothly image at the given path under images.
- * Wrapper around ExportedImage to provide smooth pop in image on load.
+ * Renders an smooth image at the given path under images.
+ * Wrapper around ExportedImage to provide smooth pop in image on load,
+ * rendering a skeleton while the image is loading to reduce layout shift.
  * @param props Additional props are the same for ExportedImage.
  */
 export default function SmoothImage(props: {
@@ -21,17 +23,24 @@ export default function SmoothImage(props: {
   width: number;
   height: number;
   className?: string;
+  skeletonClassName?: string;
 }) {
   const [isLoaded, setIsLoaded] = useState(false);
   return (
-    <ExportedImage
-      {...props}
-      className={cn(
-        props.className,
-        "transition-opacity",
-        isLoaded ? "opacity-1" : "opacity-0",
-      )}
-      onLoad={() => setIsLoaded(true)}
-    />
+    <>
+      <ExportedImage
+        {...props}
+        className={cn(
+          props.className,
+          "transition-opacity",
+          isLoaded ? "" : "size-0",
+          isLoaded ? "opacity-1" : "opacity-0",
+        )}
+        onLoad={() => setIsLoaded(true)}
+      />
+      <Skeleton
+        className={cn(props.skeletonClassName, isLoaded ? "hidden" : "block")}
+      />
+    </>
   );
 }
