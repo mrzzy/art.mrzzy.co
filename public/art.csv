@@ -10,5 +10,5 @@ ID,Image,Orientation,Height (mm),Width (mm),Made On,Title,Medium,Location,Painti
 9,/art/9.jpg,Horizontal,180,260,2024-07-02,Late Afternoon Tea,Watercolor on paper,Home,2.5,,50,FALSE,Available,,,,,
 10,/art/10.jpg,Vertical,380,270,2024-07-07,River Sparkle,Watercolor on paper,Home,4,,200,TRUE,Available,,,,,
 11,/art/11.jpg,Horizontal,310,410,2024-07-22,Jog by the Pier,Watercolor on paper,Luggage,4,,150,FALSE,Available,,,,,
-12,/art/12.jpg,Horizontal,310,410,2024-07-23,Jing'an Temple,Watercolor on paper,Luggage,4,,200,FALSE,Available,,,,,
-13,/art/13.jpg,Horizontal,310,410,2024-07-23,Hogwarts,Watercolor on paper,Luggage,4,,200,FALSE,Available,,,,,
+12,/art/12.jpg,Horizontal,310,410,2024-07-23,Jing'an Temple,Watercolor on paper,Luggage,4,,200,TRUE,Available,,,,,
+13,/art/13.jpg,Horizontal,310,410,2024-07-23,Hogwarts,Watercolor on paper,Luggage,4,,200,TRUE,Available,,,,,
