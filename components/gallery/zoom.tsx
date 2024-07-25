@@ -49,7 +49,7 @@ export default function ZoomView(props: { art: Art; onClose: () => void }) {
       <Contact
         trigger="Inquire"
         dark={true}
-        triggerClassName={`${buttonVariants()} justify-self-end round bg-green hover:!bg-darkGreen`}
+        triggerClassName={`${buttonVariants()} justify-self-end round !bg-green hover:!bg-darkGreen`}
       ></Contact>
     </>
   );
