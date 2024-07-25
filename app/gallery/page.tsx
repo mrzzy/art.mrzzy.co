@@ -6,6 +6,7 @@
 
 import Gallery from "@/components/gallery/gallery";
 import { parseArt } from "@/lib/parsing";
+import { Suspense } from "react";
 
 /**
  * Renders the Gallery Page.
@@ -17,7 +18,9 @@ export default async function GalleryPage() {
 
   return (
     <main className="md:my-12">
-      <Gallery pieces={pieces} />
+      <Suspense>
+        <Gallery pieces={pieces} />
+      </Suspense>
     </main>
   );
 }
