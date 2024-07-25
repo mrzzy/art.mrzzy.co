@@ -10,8 +10,8 @@ import { Art } from "@/lib/models";
 import Thumbnail from "./thumbnail";
 import ZoomView from "./zoom";
 import { usePathname, useSearchParams, useRouter } from "next/navigation";
+import { Param } from "../navigation/navitem";
 
-const PARAM_VIEW = "v";
 /**
  * Renders a scrollable gallery of thumbnail images of art pieces.
  * Displays a modal zoom view of an art piece if url parameter 'view=<ID>'
