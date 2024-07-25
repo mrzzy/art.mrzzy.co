@@ -54,6 +54,7 @@ jobs:
     - name: Build site
       run: npm run build
     - name: Upload site to b2
+      if: ${{ github.ref == 'refs/heads/main' }}
       env:
         B2_APPLICATION_KEY_ID: "${{ secrets.B2_APPLICATION_KEY_ID }}"
         B2_APPLICATION_KEY: "${{ secrets.B2_APPLICATION_KEY }}"
