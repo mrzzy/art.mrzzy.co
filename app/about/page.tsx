@@ -38,7 +38,7 @@ export default function About() {
         <p>
           is a Singaporean watercolorist. Welding the fluidity and transparency of the medium,
           he primarily works En Plein Air to capture the light and atmosphere to capture of fleeting moment.
-          As self-taught artist, he work is influenced by likes of Thomas Schaller, Hazel Sloan & Joseph Zbukvic.
+          As self-taught artist, his work is influenced by likes of Thomas Schaller, Hazel Sloan & Joseph Zbukvic.
         </p>
         <div>
           <Link
