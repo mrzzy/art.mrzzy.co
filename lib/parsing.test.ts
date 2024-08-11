@@ -22,7 +22,7 @@ describe("parseArt()", () => {
       id: "1",
       image: "/art/1.jpg",
       listPrice: "50",
-      location: "Luggage",
+      location: "Home",
       madeOn: new Date("2024-07-16T00:00:00.000Z"),
       medium: "Watercolor on paper",
       orientation: Orientation.Vertical,
