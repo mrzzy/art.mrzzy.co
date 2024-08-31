@@ -30,3 +30,5 @@ ID,Image,Orientation,Height (mm),Width (mm),Made On,Title,Medium,Location,Painti
 29,/art/29.jpg,Horizontal,380,530,2024-08-11,Petite Pain Bakery,Watercolor on Paper,Home,7,,50,TRUE,Available,,,,,
 30,/art/30.jpg,Horizontal,380,530,2024-08-14,Hall XI,Watercolor on Paper,Home,7,,75,TRUE,Available,,,,,
 31,/art/31.jpg,Horizontal,380,530,2024-08-17,Preflight,Watercolor on Paper,Home,7,,100,TRUE,Available,,,,,
+32,/art/32.jpg,Vertical,530,380,2024-08-25,The Cuauhtémoc,Watercolor on Paper,Home,7,,50,FALSE,Available,,,,,
+33,/art/33.jpg,Horizontal,380,530,2024-08-31,Mapletree in Business,Watercolor on Paper,Home,7,,50,FALSE,Available,,,,,
