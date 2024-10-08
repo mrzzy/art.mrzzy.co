@@ -1,4 +1,4 @@
-ID,Image,Orientation,Height (mm),Width (mm),Made On,Title,Medium,Location,Painting Cost,Framing Cost,List Price,Featured,Status,Exhibited,Sales Channel,Sold On,Sold Price,Bought By
+,Image,Orientation,Height (mm),Width (mm),Made On,Title,Medium,Location,Painting Cost,Framing Cost,List Price,Featured,Status,Exhibited,Sales Channel,Sold On,Sold Price,Bought By
 1,/art/1.jpg,Vertical,410,310,2024-07-16,KL Dusk,Watercolor on paper,Home,5,,50,FALSE,Available,,,,,
 2,/art/2.jpg,Horizontal,180,260,2024-07-16,National Mosque,Watercolor on paper,Home,2.5,,25,FALSE,Available,,,,,
 3,/art/3.jpg,Horizontal,310,410,2024-07-16,St. John's Institution,Watercolor on paper,Home,5,,100,FALSE,Available,,,,,
@@ -32,3 +32,8 @@ ID,Image,Orientation,Height (mm),Width (mm),Made On,Title,Medium,Location,Painti
 31,/art/31.jpg,Horizontal,380,530,2024-08-17,Preflight,Watercolor on Paper,Home,7,,100,TRUE,Available,,,,,
 32,/art/32.jpg,Vertical,530,380,2024-08-25,The Cuauhtémoc,Watercolor on Paper,Home,7,,50,FALSE,Available,,,,,
 33,/art/33.jpg,Horizontal,380,530,2024-08-31,Mapletree in Business,Watercolor on Paper,Home,7,,50,FALSE,Available,,,,,
+34,/art/34.jpg,Horizontal,380,530,2024-09-01,Supertrees,Watercolor on Paper,Home,7,,25,FALSE,Available,,,,,
+35,/art/35.jpg,Horizontal,380,530,2024-09-24,Tranquil Lake,Watercolor on Paper,Home,7,,75,FALSE,Available,,,,,
+36,/art/36.jpg,Horizontal,380,530,2024-09-24,Dancing Lillies,Watercolor on Paper,Home,7,,50,FALSE,Available,,,,,
+37,/art/37.jpg,Horizontal,380,530,2024-09-30,Boathouse,Watercolor on Paper,Home,7,,50,FALSE,Available,,,,,
+38,/art/38.jpg,Horizontal,380,530,2024-09-21,Epiphany,Watercolor on Paper,Home,7,,75,FALSE,Available,,,,,
