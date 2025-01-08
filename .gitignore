@@ -132,3 +132,6 @@ dist
 # next-image-export-optimizer
 optimized/
 next-image-export-optimizer-hashes.json
+
+# vim session
+Session.vim
