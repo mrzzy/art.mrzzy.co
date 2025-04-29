@@ -27,10 +27,11 @@ export default function SmoothImage(props: {
   skeletonClassName?: string;
 }) {
   const [isLoaded, setIsLoaded] = useState(false);
+  const {skeletonClassName, ...imgProps} = props;
   return (
     <>
       <ExportedImage
-        {...props}
+        {...imgProps}
         className={cn(
           props.className,
           "transition-opacity",
