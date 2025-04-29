@@ -43,6 +43,8 @@ const DialogContent = React.forwardRef<
       )}
       {...props}
     >
+      {/* empty title to satisfy radix-ui screen reader requirements */}
+      <DialogPrimitive.Title className="sr-only"></DialogPrimitive.Title>
       {children}
       <DialogPrimitive.Close className="absolute right-8 top-8 rounded-sm opacity-70  transition-opacity hover:opacity-100 focus:outline-none  disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground">
         <Minimize2 className="h-8 w-8" />
