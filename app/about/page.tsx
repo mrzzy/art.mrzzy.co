@@ -36,9 +36,9 @@ export default function About() {
           alt="Watercolor background" width={BackgroundImg.width} height={BackgroundImg.height} />
         <h1 className="font-serif text-6xl">Zhu Zhanyan</h1>
         <p>
-          is a Singaporean watercolorist. Welding the fluidity and transparency of the medium,
-          he primarily works En Plein Air to capture the light and atmosphere to capture of fleeting moment.
-          As self-taught artist, his work is influenced by likes of Thomas Schaller, Hazel Sloan & Joseph Zbukvic.
+          is a Singaporean watercolorist. Harnessing the fluidity and transparency of watercolor,
+          he primarily works en plein air, capturing light, atmosphere, and the fleeting essence of each moment.
+          A self-taught artist, his style is influenced by masters such as Thomas Schaller, Hazel Sloan, and Joseph Zbukvic.
         </p>
         <div>
           <Link
