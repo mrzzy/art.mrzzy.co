@@ -135,3 +135,6 @@ next-image-export-optimizer-hashes.json
 
 # vim session
 Session.vim
+
+# Macos
+.DS_Store
