@@ -7,6 +7,30 @@ import { readFile } from "fs/promises";
 import { parse as parseCSV } from "csv-parse/sync";
 import { join } from "path";
 import { Art } from "./models";
+
+/** List of expected columns in art CSV */
+const ART_CSV_COLS = [
+  "ID",
+  "Image",
+  "Orientation",
+  "Height (mm)",
+  "Width (mm)",
+  "Made On",
+  "Title",
+  "Medium",
+  "Location",
+  "Painting Cost",
+  "List Price",
+  "Featured",
+  "Status",
+  "Framing Cost",
+  "Sold On",
+  "Sales Channel",
+  "Sold Price",
+  "Bought By",
+  "Exhibited"
+];
+
 /**
  * Read Art metadata from CSV.
  * @param [csvPath=join(process.cwd(), "public", "art.csv")] Path to the CSV to
@@ -17,6 +41,9 @@ export async function parseArt(
   csvPath: string = join(process.cwd(), "public", "art.csv"),
 ): Promise<Art[]> {
   return parseCSV(await readFile(csvPath), { columns: true }).map((raw: any) => {
+    if(ART_CSV_COLS.filter(c => c in raw).length !== ART_CSV_COLS.length) {
+      throw new Error("Invalid art CSV: Missing columns");
+    }
     return {
       id: raw["ID"],
       image: raw["Image"],
