@@ -1,4 +1,4 @@
-,Image,Orientation,Height (mm),Width (mm),Made On,Title,Medium,Location,Painting Cost,Framing Cost,List Price,Featured,Status,Exhibited,Sales Channel,Sold On,Sold Price,Bought By
+ID,Image,Orientation,Height (mm),Width (mm),Made On,Title,Medium,Location,Painting Cost,Framing Cost,List Price,Featured,Status,Exhibited,Sales Channel,Sold On,Sold Price,Bought By
 1,/art/1.jpg,Vertical,410,310,2024-07-16,KL Dusk,Watercolor on paper,Home,5,,45,FALSE,Available,,,,,
 2,/art/2.jpg,Horizontal,180,260,2024-07-16,National Mosque,Watercolor on paper,Home,2.5,,20,FALSE,Available,,,,,
 3,/art/3.jpg,Horizontal,310,410,2024-07-16,St. John's Institution,Watercolor on paper,Home,5,,45,FALSE,Available,,,,,
