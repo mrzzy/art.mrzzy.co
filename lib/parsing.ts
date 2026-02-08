@@ -96,9 +96,13 @@ export async function parseArt(
           art[key] == null ||
           (typeof art[key] === "string" && art[key].trim() === "")
         ) {
-          throw new Error(`Invalid art CSV: Required field missing or empty: ${col}`);
+          throw new Error(
+            `Invalid art CSV: Required field missing or empty: ${col}`,
+          );
         }
       }
+
+      return art;
     },
   );
 }
