@@ -37,6 +37,7 @@ export type Sale = {
 export type Art = {
   id: string;
   image: string;
+  hidden: boolean;
   orientation: Orientation;
   height: number;
   width: number;
@@ -52,3 +53,20 @@ export type Art = {
   sale: Sale | null;
   exhibited: string | null;
 };
+
+/* List of columns that require nonempty values in Art object */
+export const ART_REQUIRED_COLS = [
+  "id",
+  "image",
+  "hidden",
+  "orientation",
+  "height",
+  "width",
+  "madeOn",
+  "title",
+  "medium",
+  "listPrice",
+  "featured",
+  "status",
+  // typescript compiler will ensure these are keys of Art
+] as const satisfies readonly (keyof Art)[];
