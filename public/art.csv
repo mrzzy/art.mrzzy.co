@@ -183,7 +183,7 @@ ID,Image,Hidden,Orientation,Height (mm),Width (mm),Made On,Title,Medium,Location
 182,/art/182.jpg,FALSE,Horizontal,380,530,2026-02-21,Pet Lovers Centre,Watercolor on Paper,Home,7,FALSE,,45,FALSE,Available,,,,,
 183,/art/183.jpg,FALSE,Horizontal,380,530,2026-02-22,Morning,Watercolor on Paper,Home,7,FALSE,,45,FALSE,Available,,,,,
 184,/art/184.jpg,FALSE,Vertical,530,380,2026-02-22,Glossy,Watercolor on Paper,Home,7,FALSE,,45,FALSE,Available,,,,,
-185,/art/185.jpg,FALSE,Horizontal,380,530,2026-02-28,Yellow on Waterloo Street,Watercolor on Paper,Home,7,FALSE,,45,FALSE,Available,,,,,
+185,/art/185.jpg,FALSE,Horizontal,380,530,2026-02-28,Yellow on Waterloo Street,Watercolor on Paper,Sold,7,FALSE,118.9,45,FALSE,Sold,Lee Choon Kee Art Exhibition,Lee Choon Kee Art Exhibition,2026-05-27,500,Nan Chyuan
 186,/art/186.jpg,FALSE,Horizontal,380,530,2026-03-01,Golden Hour,Watercolor on Paper,Home,7,FALSE,,45,TRUE,Available,,,,,
 187,/art/187.jpg,FALSE,Horizontal,380,530,2026-03-07,Tembeling Road,Watercolor on Paper,Home,7,FALSE,,45,FALSE,Available,,,,,
 188,/art/188.jpg,FALSE,Horizontal,380,530,2026-03-08,Nanyang Sacred Union,Watercolor on Paper,Home,7,FALSE,,45,FALSE,Available,,,,,
@@ -207,3 +207,6 @@ ID,Image,Hidden,Orientation,Height (mm),Width (mm),Made On,Title,Medium,Location
 206,/art/206.jpg,FALSE,Horizontal,380,530,2026-05-23,Yang Tao Yuan Sheng Hong Temple,Watercolor on Paper,Home,7,FALSE,,45,FALSE,Available,,,,,
 207,/art/207.jpg,FALSE,Vertical,530,380,2026-05-24,Lor 13 Geylang,Watercolor on Paper,Home,7,FALSE,,45,FALSE,Available,,,,,
 208,/art/208.jpg,FALSE,Horizontal,380,530,2026-05-10,Hanoi Opera House,Watercolor on Paper,Home,7,FALSE,,45,FALSE,Available,,,,,
+209,/art/209.jpg,FALSE,Horizontal,380,530,2026-05-30,Yishun Backyard,Watercolor on Paper,Home,7,FALSE,,45,FALSE,Available,,,,,
+210,/art/210.jpg,FALSE,Vertical,530,380,2026-06-06,Place Beyond the Trees,Watercolor on Paper,Home,7,FALSE,,45,FALSE,Available,,,,,
+211,/art/211.jpg,FALSE,Horizontal,380,530,2026-06-07,Havelock Spirals,Watercolor on Paper,Home,7,FALSE,,45,FALSE,Available,,,,,
