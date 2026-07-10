@@ -218,8 +218,10 @@ ID,Image,Hidden,Orientation,Height (mm),Width (mm),Made On,Title,Medium,Location
 217,/art/217.jpg,FALSE,Horizontal,380,530,2026-06-27,Hofburg Heldenplatz,Watercolor on Paper,Home,7,FALSE,,45,FALSE,Available,,,,,
 218,/art/218.jpg,FALSE,Vertical,530,380,2026-06-27,Reformed City Church,Watercolor on Paper,Home,7,FALSE,,45,FALSE,Available,,,,,
 219,/art/219.jpg,FALSE,Horizontal,380,530,2026-06-28,Austrian Parliament,Watercolor on Paper,Home,7,FALSE,,45,FALSE,Available,,,,,
-220,/art/220.jpg,FALSE,Horizontal,380,530,2026-06-29,Hofburg Heldenplatz,Watercolor on Paper,Home,7,FALSE,,45,FALSE,Available,,,,,
+220,/art/220.jpg,FALSE,Horizontal,380,530,2026-06-29,Hofburg Michaelerplatz,Watercolor on Paper,Home,7,FALSE,,45,FALSE,Available,,,,,
 221,/art/221.jpg,FALSE,Vertical,530,380,2026-06-29,Carlo I,Watercolor on Paper,Alexander Carlos,7,FALSE,,221.52,FALSE,Sold,,Streetside,2026-06-30,221.52,Alexander Carlos
 222,/art/222.jpg,FALSE,Horizontal,325,560,2026-06-30,Karlsplatz,Watercolor on Paper,Home,5.5,FALSE,,45,FALSE,Available,,,,,
 223,/art/223.jpg,FALSE,Vertical,325,560,2026-06-30,Cafe Frauenhuber,Watercolor on Paper,Home,5.5,FALSE,,45,FALSE,Available,,,,,
-224,/art/224.jpg,FALSE,Horizontal,530,380,2026-07-02,Carlo II,Watercolor on Paper,Alexander Carlos,7,FALSE,,221.52,FALSE,Collection,,Streetside,2026-06-30,221.52,Alexander Carlos
+224,/art/224.jpg,FALSE,Horizontal,380,530,2026-07-02,Carlo II,Watercolor on Paper,Alexander Carlos,7,FALSE,,221.52,FALSE,Collection,,Streetside,,,
+225,/art/225.jpg,FALSE,Horizontal,380,530,2026-07-07,Market Frenzy,Watercolor on Paper,Home,7,FALSE,,45,FALSE,Available,,,,,
+226,/art/226.jpg,FALSE,Horizontal,380,530,2026-07-07,The Sun Sets on a Era,Watercolor on Paper,Home,7,FALSE,,45,FALSE,Available,,,,,
