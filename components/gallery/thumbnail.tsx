@@ -40,7 +40,6 @@ export default function Thumbnail(props: { art: Art; onClick: () => void }) {
           height={imgWidth}
           width={imgHeight}
           skeletonClassName={skeletonClass}
-          loading="eager"
         />
       ) : (
         <Skeleton className={skeletonClass} />
