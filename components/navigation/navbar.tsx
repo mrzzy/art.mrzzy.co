@@ -61,9 +61,11 @@ export function NavBar() {
 
   return (
     <NavigationMenu className="flex-row items-start min-w-full">
+      {/* Expandable Navigation Menu toggle for small width devices */}
       <Button
         variant="ghost"
         className="flex-none md:hidden p-1 m-6 size-9 active:bg-slate-400"
+        aria-label="Toggle Navigation Bar"
         onClick={() => setExpanded(!expanded)}
       >
         <Menu />
@@ -82,7 +84,10 @@ export function NavBar() {
               : "hidden")
           }
         >
-          <NavLink href={NavItem.Gallery} selected={pathname === NavItem.Gallery}>
+          <NavLink
+            href={NavItem.Gallery}
+            selected={pathname === NavItem.Gallery}
+          >
             Gallery
           </NavLink>
           <NavLink href={NavItem.About} selected={pathname === NavItem.About}>
