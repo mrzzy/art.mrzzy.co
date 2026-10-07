@@ -34,6 +34,7 @@ export default function About() {
         src={ProfileImg}
         alt="Zhanyan painting"
         loading="eager"
+        sizes="(min-width: 640px) 120rem, 100vw"
       />
       <div className="flex flex-col gap-y-8">
         <SmoothImage
@@ -42,6 +43,7 @@ export default function About() {
           src={BackgroundImg}
           alt="Watercolor background"
           loading="eager"
+          sizes="(min-width: 640px) 20rem, 100vw"
         />
         <h1 className="font-serif text-6xl">Zhu Zhanyan</h1>
         <p>

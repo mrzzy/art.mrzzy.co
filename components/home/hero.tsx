@@ -65,6 +65,7 @@ export default function Hero(props: { featured: Art[] }) {
     >
       <SmoothImage
         src={`/images${image}`}
+        sizes="(min-width: 640px) 80vw, 100vw"
         className={`object-contain ${heightLimit}`}
         alt={title}
         width={winWidth}
