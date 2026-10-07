@@ -23,17 +23,22 @@ export const metadata: Metadata = {
  * Renders the About page.
  */
 export default function About() {
+  let profileImgSize = "h-[28rem] w-[120rem]";
+  let watercolorSize = "h-[30rem] w-[20rem]";
+
   return (
-    <main className="md:my-8 p-8 flex flex-col md:flex-row mx-auto md:max-w-[80rem] gap-8">
+    <main className="md:my-8 p-8 flex flex-col md:flex-row mx-auto md:max-w-[80rem] gap-8 items-center">
       <SmoothImage
-        className="object-contain basis-1/2"
+        className={`object-contain  ${profileImgSize}`}
+        skeletonClassName={profileImgSize}
         src={ProfileImg}
         alt="Zhanyan painting"
         loading="eager"
       />
-      <div className="basis-1/2 flex flex-col gap-y-8">
+      <div className="flex flex-col gap-y-8">
         <SmoothImage
-          className="hidden md:block object-contain w-[22rem]"
+          className={`hidden md:block object-contain ${watercolorSize}`}
+          skeletonClassName={watercolorSize}
           src={BackgroundImg}
           alt="Watercolor background"
           loading="eager"
