@@ -10,14 +10,14 @@ import { Art, Orientation } from "@/lib/models";
 import { useEffect, useState } from "react";
 import { Skeleton } from "@/components/ui/skeleton";
 import { aspect } from "@/lib/utils";
-import SmoothImage from "@/components/ui/smooth-image"
+import SmoothImage from "@/components/ui/smooth-image";
 
 /**
  * Render a gallery thumbnail for the given art piece.
  * @param props.art Art piece to render in the gallery thumbnail
  *
  */
-export default function Thumbnail(props: { art: Art, onClick: () => void }) {
+export default function Thumbnail(props: { art: Art; onClick: () => void }) {
   const [isClient, setIsClient] = useState(false);
   useEffect(() => {
     setIsClient(true);
@@ -29,7 +29,7 @@ export default function Thumbnail(props: { art: Art, onClick: () => void }) {
   const imgWidth =
     (orientation === Orientation.Horizontal ? colSpan : 1) * colWidth;
   const imgHeight = imgWidth / aspect(width, height);
-  const skeletonClass = "h-[32rem]" ;
+  const skeletonClass = "h-[32rem]";
   return (
     <div className={`group relative`} onClick={props.onClick}>
       {isClient ? (
@@ -40,9 +40,10 @@ export default function Thumbnail(props: { art: Art, onClick: () => void }) {
           height={imgWidth}
           width={imgHeight}
           skeletonClassName={skeletonClass}
+          loading="eager"
         />
       ) : (
-        <Skeleton className={skeletonClass}/>
+        <Skeleton className={skeletonClass} />
       )}
     </div>
   );

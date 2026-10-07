@@ -59,7 +59,10 @@ export default function Hero(props: { featured: Art[] }) {
   // art image
   const skeletonClass = `md:ml-24 w-[100vmin] h-[80vmin] ${heightLimit}`;
   const hero = isClient ? (
-    <Link className="hover:brightness" href={`${NavItem.Gallery}?${Param.View}=${piece.id}`}>
+    <Link
+      className="hover:brightness"
+      href={`${NavItem.Gallery}?${Param.View}=${piece.id}`}
+    >
       <SmoothImage
         src={`/images${image}`}
         className={`object-contain ${heightLimit}`}
@@ -67,6 +70,7 @@ export default function Hero(props: { featured: Art[] }) {
         width={winWidth}
         height={winHeight}
         skeletonClassName={skeletonClass}
+        loading="eager"
       />
     </Link>
   ) : (
@@ -92,10 +96,7 @@ export default function Hero(props: { featured: Art[] }) {
       {hero}
       <div className="m-6 space-y-6 min-w-[30vw]">
         {isClient ? <Metadata art={piece} /> : metaSkeleton}
-        <Link
-          className={`${buttonVariants()}`}
-          href={NavItem.Gallery}
-        >
+        <Link className={`${buttonVariants()}`} href={NavItem.Gallery}>
           View Work &gt;{" "}
         </Link>
       </div>
