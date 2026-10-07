@@ -29,8 +29,6 @@ export default function About() {
         className="object-contain basis-1/2"
         src={ProfileImg}
         alt="Zhanyan painting"
-        width={ProfileImg.width}
-        height={ProfileImg.height}
         loading="eager"
       />
       <div className="basis-1/2 flex flex-col gap-y-8">
@@ -38,8 +36,6 @@ export default function About() {
           className="hidden md:block object-contain w-[22rem]"
           src={BackgroundImg}
           alt="Watercolor background"
-          width={BackgroundImg.width}
-          height={BackgroundImg.height}
           loading="eager"
         />
         <h1 className="font-serif text-6xl">Zhu Zhanyan</h1>
