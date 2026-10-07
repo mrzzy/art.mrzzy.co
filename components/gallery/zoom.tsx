@@ -73,6 +73,7 @@ export default function ZoomView(props: { art: Art; onClose: () => void }) {
           alt={title}
           width={width || 1280}
           height={height || 1080}
+          loading="eager"
         />
         <div className="flex flex-row items-center mt-4 gap-x-4">
           <Metadata art={props.art} />
