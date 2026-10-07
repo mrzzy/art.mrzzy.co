@@ -12,7 +12,3 @@ export enum NavItem {
   Contact = "/about#contact",
 }
 
-/** URL Search Parameters */
-export enum Param {
-  View = "v",
-}

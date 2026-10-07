@@ -12,7 +12,8 @@ import { useEffect, useState } from "react";
 import { Skeleton } from "../ui/skeleton";
 import { buttonVariants } from "../ui/button";
 import Link from "next/link";
-import { NavItem, Param } from "../navigation/navitem";
+import { NavItem } from "../navigation/navitem";
+import { Param } from "../navigation/params";
 import SmoothImage from "@/components/ui/smooth-image";
 import Metadata from "@/components/ui/art-metadata";
 
