@@ -135,7 +135,7 @@ export default function Gallery(props: { pieces: Art[] }) {
   ));
 
   // chunk pieces into pages to avoid showing all pieces at once causing slow load times
-  const pages = paginate(images, 10);
+  const pages = paginate(images, 12);
   const page = Number.parseInt(params.get(Param.Page) || "0");
   if (page >= pages.length) {
     notFound();
@@ -146,7 +146,7 @@ export default function Gallery(props: { pieces: Art[] }) {
 
   return (
     <div>
-      <section className="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-5 gap-4 m-8 items-stretch">
+      <section className="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-6 gap-4 m-8 items-stretch">
         {pages[page]}
       </section>
 
